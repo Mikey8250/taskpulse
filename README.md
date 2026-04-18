@@ -1,36 +1,94 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# TaskPulse 🚀
 
-## Getting Started
+A full-stack task management application built with Next.js, allowing users to create, manage, and track tasks with a clean Kanban board interface.
 
-First, run the development server:
+## Live Demo
+[TaskPulse Live](YOUR_VERCEL_URL)
 
-```bash
+## Tech Stack
+- **Frontend:** Next.js 15 (App Router) + TypeScript
+- **Styling:** Tailwind CSS
+- **Backend:** Next.js API Routes
+- **Database:** MongoDB Atlas
+- **ORM:** Prisma v6
+- **Auth:** JWT (httpOnly cookies)
+- **Deployment:** Vercel
+
+## Features
+- ✅ JWT Authentication (Register / Login / Logout)
+- ✅ Protected routes via middleware
+- ✅ Create, Edit, Delete tasks
+- ✅ Kanban board (To Do / In Progress / Done)
+- ✅ Filter tasks by status
+- ✅ Due date support
+- ✅ Responsive UI
+- ✅ Clean component architecture
+
+## Key Decisions
+- **JWT in httpOnly cookies** — more secure than localStorage, prevents XSS attacks
+- **Prisma ORM** — type-safe database queries, better DX
+- **Next.js API Routes** — no separate Express server needed, simpler deployment
+- **App Router** — better performance with server components
+- **Component-based design** — TaskCard, TaskColumn, TaskModal, Navbar all separated
+
+## Setup
+
+### Prerequisites
+- Node.js 18+
+- MongoDB Atlas account
+
+### Installation
+
+1. Clone the repo
+\```bash
+git clone https://github.com/YOUR_USERNAME/taskpulse.git
+cd taskpulse
+\```
+
+2. Install dependencies
+\```bash
+npm install
+\```
+
+3. Setup environment variables — create `.env` file:
+\```env
+DATABASE_URL="mongodb+srv://username:password@cluster.mongodb.net/taskpulse"
+JWT_SECRET="your-secret-key"
+\```
+
+4. Generate Prisma client
+\```bash
+npx prisma generate
+\```
+
+5. Run development server
+\```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+\```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
+\```
+taskpulse/
+  app/
+    (auth)/         → Login & Register pages
+    (dashboard)/    → Dashboard & Tasks pages
+    api/            → API routes (auth + tasks)
+  components/
+    Navbar.tsx      → Navigation header
+    TaskCard.tsx    → Individual task card
+    TaskColumn.tsx  → Kanban column
+    TaskModal.tsx   → Create/Edit task modal
+  lib/
+    db.ts           → Prisma client singleton
+  types/
+    index.ts        → Shared TypeScript types
+  prisma/
+    schema.prisma   → Database schema
+\```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Author
+- **Name:** Mohit Burnwal
+- **GitHub:** [github.com/YOUR_USERNAME](https://github.com/YOUR_USERNAME)
+- **LinkedIn:** [linkedin.com/in/YOUR_PROFILE](https://linkedin.com/in/YOUR_PROFILE)
