@@ -90,5 +90,5 @@ taskpulse/
 
 ## Author
 - **Name:** Mohit Burnwal
-- **GitHub:** [github.com/YOUR_USERNAME](https://github.com/YOUR_USERNAME)
-- **LinkedIn:** [linkedin.com/in/YOUR_PROFILE](https://linkedin.com/in/YOUR_PROFILE)
+- **GitHub:** https://github.com/Mikey8250/
+- **LinkedIn:** https://www.linkedin.com/in/mohit-burnwal-7608762b3/
