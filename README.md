@@ -3,7 +3,7 @@
 A full-stack task management application built with Next.js, allowing users to create, manage, and track tasks with a clean Kanban board interface.
 
 ## Live Demo
-[TaskPulse Live](YOUR_VERCEL_URL)
+[TaskPulse Live](https://taskpulse-mtys4phia-mohitburnwal2-8124s-projects.vercel.app/)
 
 ## Tech Stack
 - **Frontend:** Next.js 15 (App Router) + TypeScript
